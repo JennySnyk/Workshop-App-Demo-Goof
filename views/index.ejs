@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to <%= title %></h1>
+    <p>This is a deliberately vulnerable application for security demonstrations.</p>
+
+    <div class="login-form">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div class="todo-section">
+      <h2>To-Do List</h2>
+      <form action="/todo" method="post">
+        <input type="text" name="item" placeholder="New to-do item">
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+        <% if(typeof(items) !== 'undefined') { %>
+          <% items.forEach(function(item) { %>
+            <li><%= item %></li>
+          <% }); %>
+        <% } %>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>

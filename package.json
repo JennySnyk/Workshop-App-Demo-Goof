@@ -1,0 +1,27 @@
+{
+  "name": "workshop-app-demo-goof",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable application for security demos.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "^2.2.0",
+    "ejs": "2.5.7",
+    "express": "4.16.3",
+    "handlebars": "4.0.11",
+    "jquery": "3.3.1",
+    "lodash": "4.17.10",
+    "marked": "0.3.6",
+    "minimist": "1.2.0",
+    "moment": "2.22.1",
+    "mongodb": "^6.17.0",
+    "node-forge": "0.7.5",
+    "node-serialize": "0.0.4",
+    "pug": "2.0.3",
+    "sqlite3": "^5.1.7",
+    "st": "1.2.2"
+  }
+}
