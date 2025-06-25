@@ -15,6 +15,7 @@ const nosqlInjection = require('./routes/nosql-injection');
 const insecureRandomness = require('./routes/insecure-randomness');
 const brokenAccessControl = require('./routes/broken-access-control');
 const appFeatures = require('./routes/app-features');
+const weakHashing = require('./routes/weak-hashing');
 
 const app = express();
 const port = 3000;
@@ -39,6 +40,7 @@ app.use(nosqlInjection);
 app.use(insecureRandomness);
 app.use(brokenAccessControl);
 app.use(appFeatures);
+app.use(weakHashing);
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'Workshop App Demo' });
