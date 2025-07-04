@@ -9,6 +9,10 @@ This is a deliberately vulnerable web application created for security demonstra
 - **Container Vulnerabilities**: A `Dockerfile` using a known vulnerable base image.
 - **IaC Misconfigurations**: Terraform files with common security flaws.
 
+## Screenshot
+
+![Application Screenshot](assets/screenshot.png)
+
 ## Getting Started
 
 ### Prerequisites
