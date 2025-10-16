@@ -1,0 +1,13 @@
+# Dockerfile for Redis vulnerable to CVE-2025-49844 (RediShell)
+# WARNING: This container is intentionally vulnerable for testing purposes only
+# DO NOT expose to production environments or the public internet
+
+FROM redis:7.2.0-alpine
+
+# Expose Redis default port
+EXPOSE 6379
+
+# Configure Redis to be more vulnerable for testing
+# Disable protected mode (NOT recommended in production)
+# This allows connections without authentication from any IP
+CMD ["redis-server", "--protected-mode", "no", "--bind", "0.0.0.0"]
