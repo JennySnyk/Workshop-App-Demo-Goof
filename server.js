@@ -15,6 +15,8 @@ const nosqlInjection = require('./routes/nosql-injection');
 const insecureRandomness = require('./routes/insecure-randomness');
 const brokenAccessControl = require('./routes/broken-access-control');
 const appFeatures = require('./routes/app-features');
+const syncCommandInjection = require('./routes/sync-command-injection');
+const xxeInjection = require('./routes/xxe-injection');
 
 const app = express();
 const port = 3000;
@@ -39,6 +41,8 @@ app.use(nosqlInjection);
 app.use(insecureRandomness);
 app.use(brokenAccessControl);
 app.use(appFeatures);
+app.use(syncCommandInjection);
+app.use(xxeInjection);
 
 app.get('/', (req, res) => {
   res.render('index', { title: 'Workshop App Demo' });

