@@ -20,7 +20,7 @@
     "mongodb": "^6.17.0",
     "node-forge": "0.7.5",
     "node-serialize": "0.0.4",
-    "pug": "2.0.3",
+    "pug": "3.0.0",
     "sqlite3": "^5.1.7",
     "st": "1.2.2"
   }
